@@ -1,0 +1,84 @@
+.footer{
+    background-color: $color-bg-2;
+    border-radius: 200px 200px 0 0;
+    @include responsive(phone){
+        border-radius: 100px 100px 0 0;
+    }
+    padding: {
+        top: 100px;
+        bottom: 50px;
+    };
+    @include responsive(tab){
+        padding: {
+            top: 50px;
+            bottom: 30px;
+
+        };
+    }
+    .container{
+        position: relative;
+        @include responsive(lg-desktop){
+            padding: 0 10px;
+        }
+        @include responsive(desktop){
+            padding: 0 10px;
+            padding-top: 30px;
+        }
+        @include responsive(tab){
+            text-align: center;
+        }
+    }
+    font-size: 16px;
+    &__text-box{
+        width: 45%;
+        @include responsive(tab){
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    &__text{
+        line-height: 25px;
+        @include responsive(desktop){
+            font-size: 15px;
+        }
+    }
+    &__list-box{
+        width: 45%;
+        @include responsive(desktop){
+           width: 50%;
+        }
+        @include responsive(tab){
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        @include responsive(phone){
+            margin-bottom: 15px;
+            text-align: start;
+        }
+        li{
+            margin-bottom: 8px;
+            @include responsive(desktop){
+                font-size: 15px;
+            }
+        }
+
+    }
+    &__download{
+        width: 100%;
+        .download__link{
+            width: 130px;
+            display: inline-block;
+        }
+        .download__link:first-child{
+            margin-right: 10px;
+        }
+    }
+    &__copy-right{
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+}

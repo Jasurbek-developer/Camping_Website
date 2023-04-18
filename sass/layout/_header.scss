@@ -1,0 +1,71 @@
+.header{
+    border-radius: 0 0 200px 200px ;
+    padding: {
+        top: 60px;
+        bottom: 266px;
+    };
+    @include responsive(phone){
+        padding-top: 30px;
+    }
+    background: {
+        image: linear-gradient(to top, rgba($color-secondary,40%),rgba($color-secondary,40%)),
+        url("../images/bg-image.jpg");
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+
+    };
+    &__text-box{
+        color: $color-white;
+        width: 40%;
+        @include responsive(lg-desktop){
+            width: 50%;
+        }
+        @include responsive(desktop){
+            width: 60%;
+        }
+        @include responsive(phone){
+            width: 90%;
+        }
+        margin: {
+            top: 220px;
+            left: auto;
+            right: auto;
+            bottom: 0;
+        };
+        @include responsive(phone){
+            margin-top: 150px;
+        }
+        text-align: center;
+    }
+    &__title{
+        font-size: 80px;
+        @include responsive(desktop){
+            font-size: 70px;
+        }
+        @include responsive(tab){
+            font-size: 60px;
+        }
+        @include responsive(phone){
+            font-size: 40px;
+        }
+        margin-bottom: 60px;
+    }
+    @include responsive(phone){
+        .header__text{
+            font-size: 16px;
+        }
+    }
+    @include responsive(tab){
+        .header__tab{
+            font-size: 17px;
+        }
+    }
+    &__link{
+        margin-top: 30px;
+        @include responsive(phone){
+            font-size: 18px;
+            padding: 12px 30px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.form{
+    &__text{
+        font-size: 16px;
+        margin: {
+            top: 16px;
+            bottom: 30px;
+        };
+    }
+    &__box{
+        background: $color-white;
+        border-radius: $border-radius;
+        box-shadow: 5px 10px 30px rbga($color-secondary, 5%);
+        padding: 15px;
+        @include flex(space-between);
+        @include responsive(phone){
+            padding: 5px;
+        }
+    }
+    &__input{
+        width: 100%;
+        outline: none;
+        padding: {
+            left: 15px;
+            top: 5px;
+            bottom: 5px;
+        };
+
+        background-image: url(../images/message.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%;
+        text-indent: 30px;
+        &:focus{
+            background-image: none;
+            text-indent: 0;
+        }
+    }
+    &__submit{
+        width: 55px;
+        height: 50px;
+        @include responsive(phone){
+           width: 45px;
+           height: 40px;
+        }
+        background-color: $color-primary;
+        border-radius: $border-radius;
+        @include center;
+        box-shadow: 5px 10px 30px rbga($color-primary, 4%);
+        @include transition;
+        img{
+            width: 25px;
+            @include responsive(phone){
+                width: 20px;
+            }
+        }
+    
+        &:hover{
+            background: darken($color-primary, 10%) ;
+        }
+    }
+}
